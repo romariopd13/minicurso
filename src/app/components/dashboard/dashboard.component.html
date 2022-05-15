@@ -1,0 +1,25 @@
+<form>
+    <div>
+        <label for="curso">Curso:</label>
+        <input type="text" [(ngModel)]="curso.nome" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div>
+        <label for="expe">Experiência:</label>
+        <input type="text" [(ngModel)]="curso.experiencia" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div>
+        <label for="versao">Versão:</label>
+        <input type="number" [(ngModel)]="curso.versao" [ngModelOptions]="{standalone: true}">
+    </div>
+    <br>
+    
+    <button (click)="enviarCurso()">Salvar</button>
+</form>
+
+
+
+
+<p>Meus cursos:</p>
+<ul>
+    <li *ngFor="let c of cursos">{{c.nome | uppercase}} - {{c.versao}}</li>
+</ul>
